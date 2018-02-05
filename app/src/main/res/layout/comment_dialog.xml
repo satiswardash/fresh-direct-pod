@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:background="#f8f9fa"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <FrameLayout
+        android:id="@+id/attachButtonlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+             />
+
+        <TextView
+            android:id="@+id/attach_count"
+            android:layout_width="20dp"
+            android:visibility="gone"
+            android:layout_height="20dp"
+            android:layout_gravity="top|right"
+            android:layout_marginTop="5dp"
+
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="6"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/CommentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/post_comment"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/ic_action_content_send" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/commentsEd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_toLeftOf="@+id/CommentButton"
+        android:layout_toRightOf="@+id/attachButtonlayout"
+        android:background="@drawable/custom_bg"
+        android:hint="Add a comment"
+        android:padding="10dp"
+
+        ></EditText>
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/splash" />
+    <TextView
+        android:id="@+id/tripId"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:text=""
+        android:textColor="@color/white"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/orders_count"
+            android:layout_width="match_parent"
+            android:textSize="60sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/time_taken"
+            android:layout_width="match_parent"
+            android:textSize="60sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/complete_trip"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="100dp"
+        android:src="@mipmap/complete_trip"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

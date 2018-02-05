@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:icon="@mipmap/home_xhdpi"
+            android:title="Home" />
+        <item
+            android:id="@+id/leaderboard"
+            android:icon="@mipmap/leaderboard_xhdpi"
+            android:title="Leaderboard" />
+        <item
+            android:id="@+id/feeds"
+            android:icon="@mipmap/feed_xhdpi"
+            android:title="Feeds" />
+
+
+    </group>
+
+</menu>

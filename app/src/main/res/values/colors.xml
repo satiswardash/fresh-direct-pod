@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_overlay">#66000000</color>
+   <!-- <color name="login_button">#fdaf00</color>-->
+    <color name="login_button">#732282</color>
+    <color name="white">#ffffff</color>
+    <color name="light_grey">#f7f3f3</color>
+    <color name="black">#000000</color>
+    <color name="grey">#696969</color>
+    <color name="midgrey">#9f9999</color>
+    <color name="green">#4e8f2d</color>
+    <color name="blue">#1dd1f5</color>
+    <color name="delivered">#0074b7</color>
+    <color name="invalid">#ba3324</color>
+    <color name="customerNotHome">#a77b57</color>
+    <color name="partialRejection">#e68100</color>
+    <color name="orderRejection">#ba3324</color>
+    <color name="enroute">#00723e</color>
+    <color name="pending">#807f7f</color>
+    <color name="red">#f54646</color>
+    <color name="feeds_unread">#cec7d1</color>
+
+</resources>

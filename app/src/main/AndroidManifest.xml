@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.incture.cherrywork.freshdirect"
+    android:versionName="1.5" android:versionCode="1">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    //Runtime Permissions required
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/fdappicon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
+        <activity
+            android:name=".Activities.StartTripActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme"></activity>
+        <activity
+            android:name=".Activities.UserMessageDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name="com.incture.cherrywork.freshdirect.Utils.AttachmentGridActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme"></activity>
+        <activity
+            android:name="com.incture.cherrywork.freshdirect.Utils.FullGallery"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme"></activity>
+        <activity
+            android:name=".Activities.CompleteTripActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme"></activity>
+        <activity
+            android:name=".Activities.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme"></activity>
+        <activity
+            android:name=".Activities.ScanBagActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme"></activity>
+        <activity
+            android:name=".Utils.BarcodeQrcodeCustomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".Activities.AllOrdersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".Activities.LeaderBoardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".Activities.LocateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".Activities.LocateAllActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".Activities.OrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".Activities.FeedsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".Activities.OrderHistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+
+        </activity>
+        <activity
+            android:name=".Activities.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+
+        </activity>
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.incture.cherrywork.freshdirect.Utils.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value= "@integer/google_play_services_version" />
+        //dev and uat crashlytics
+        <!--<meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="6baba91fdf048f78b2737d1e12cc54ab85e68299"
+            />-->
+        //production crashlytics
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="1262f7e14bdfe738510d77e3793abdd0ab8bc230"
+            />
+       <!-- <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyC0Ch4kYdf5qwaXNnnz6jVuHTfuEhdRq2g"/>-->
+        //maps production key
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDMDBJIsDbT8pNNRq4OBeiFIZNhN8uO0iQ"/>
+
+
+    </application>
+</manifest>

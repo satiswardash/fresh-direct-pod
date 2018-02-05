@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_grey"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rating_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey">
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/complete"
+        android:layout_below="@+id/rating_bar"
+        >
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp">
+
+            <com.github.gcacace.signaturepad.views.SignaturePad
+                android:id="@+id/signature_pad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:clearOnDoubleClick="true"
+                app:penColor="@android:color/black" />
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/complete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/survey"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="3dp">
+
+        <Button
+            android:id="@+id/complete_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/delivered"
+            android:padding="10dp"
+            android:text="Complete Order"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/survey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/grey"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="3dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:text="Take Survey"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size" />
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
+
