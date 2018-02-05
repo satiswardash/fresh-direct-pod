@@ -10,12 +10,12 @@
         android:id="@+id/parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@mipmap/splash">
+        android:background="FBF8F8">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_centerHorizontal="true"
-            android:src="@mipmap/app_logo"
+            android:src="@mipmap/metrodata"
             android:layout_above="@+id/uname_pwd_layout"
             android:layout_height="100dp" />
 
@@ -40,8 +40,7 @@
                     android:id="@+id/user_name_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:hint="UserName"
+                    android:background="@drawable/bg_input_text"
                     app:errorEnabled="true"
                     android:padding="5dp"
                     android:textColorHint="@android:color/black">
@@ -52,7 +51,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
-                        android:paddingLeft="5dp" />
+                        android:paddingLeft="5dp"
+                        android:hint="User name"/>
                 </android.support.design.widget.TextInputLayout>
             </android.support.v7.widget.CardView>
 
@@ -70,7 +70,7 @@
                     android:id="@+id/pwd_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/bg_input_text"
                     android:hint="Password"
                     app:errorEnabled="true"
                     android:padding="5dp"
@@ -82,7 +82,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
-                        android:paddingLeft="5dp" />
+                        android:paddingLeft="5dp"
+                        android:hint="Password"/>
                 </android.support.design.widget.TextInputLayout>
             </android.support.v7.widget.CardView>
 

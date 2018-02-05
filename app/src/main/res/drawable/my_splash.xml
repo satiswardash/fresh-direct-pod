@@ -5,6 +5,6 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@mipmap/newsplash"/>
+            android:src="@mipmap/metrodata_splash"/>
     </item>
 </layer-list>

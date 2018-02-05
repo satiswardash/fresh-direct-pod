@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FK Delivery</string>
+    <string name="app_name">Metrodata</string>
     <string name="invalid_credential">Invalid credentials</string>
     <string name="action_not_allowed">Not allowed</string>
     <string name="app_version">App version 1.5</string>
